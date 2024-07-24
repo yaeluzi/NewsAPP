@@ -1,0 +1,63 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #36BA98;
+    color: white;
+    flex-shrink: 0; /* Evita que la barra de herramientas se redimensione */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+    width: 40px; /* Asegura que el logo sea cuadrado */
+    border-radius: 50%; /* Hace que el logo se vea redondo */
+    object-fit: cover; /* Ajusta el tamaño del logo sin deformar */
+    margin-right: 10px; /* Espacio entre el logo y el título */
+  }
+  
+  
+  .title {
+    font-size: 1.5rem; /* Tamaño del título */
+  }
+  
+  .nav-items {
+    display: flex;
+    gap: 20px; /* Espacio entre elementos del menú */
+  }
+  
+  @media (max-width: 768px) {
+    .nav-items {
+      display: none; /* Ocultar el menú en dispositivos móviles */
+    }
+  }
+  
+
+  .sidenav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+  }
+  
+  mat-sidenav-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  mat-toolbar {
+    flex-shrink: 0;
+  }
+
+

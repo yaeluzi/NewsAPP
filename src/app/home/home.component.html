@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="content">
+    <div class="news-container">
+      <mat-card *ngFor="let article of headlines" class="news-card">
+        <img mat-card-image [src]="article.urlToImage" alt="Image not available" (error)="handleImageError($event)">
+        <mat-card-content>
+          <h2>{{ article.title }}</h2>
+          <p>{{ article.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button [href]="article.url" target="_blank">Leer más</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <mat-paginator [length]="totalResults"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="[5, 10, 20]"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
